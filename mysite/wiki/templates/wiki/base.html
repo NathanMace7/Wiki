@@ -20,7 +20,9 @@
 
     <ul>
         {% for page in pages %}
-        <div><li><a href="{% url 'wiki:detail' page.id %}">{{ pages }}</a></li></div>
+        <div>
+            <li><a href="{% url 'wiki:detail' page.id %}">{{ pages }}</a></li>
+        </div>
         {% endfor %}
     </ul>
 
