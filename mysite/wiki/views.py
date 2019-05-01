@@ -9,8 +9,6 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Page.objects.all()
 
-
-
 class DetailView(generic.DetailView):
     model = Page
     template_name = 'wiki/detail.html'
