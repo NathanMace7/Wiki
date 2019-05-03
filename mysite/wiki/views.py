@@ -15,6 +15,7 @@ class DetailView(generic.DetailView):
     model = Page
     template_name = 'wiki/detail.html'
 
+
 def veiw_page(request, pk):
     try:
         page = Page.objects.get(pk=pk)
