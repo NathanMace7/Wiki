@@ -14,3 +14,5 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Page
     template_name = 'wiki/detail.html'
+
+    
