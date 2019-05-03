@@ -22,3 +22,17 @@ def veiw_page(request, pk):
         return render(request, 'wiki/detail.html', {'page': page})
     except Page.DoesNotExist:
         return render(request, 'wiki/create_page.html', {'page_name': pk})
+
+
+def edit_page(request, pk):
+    try:
+        page = Page.objects.get(pk=pk)
+        content = page.content
+    except Page.DoesNotExist:
+        content = ''
+
+    return render(request, 'wiki/edit_page.html',
+        {
+            'page_name': pk,
+            'content': content
+        })

@@ -16,15 +16,6 @@
 </head>
 
 <body class="container">
-    {% block content%}NO CONTENT PROVIDED{% endblock content%}
-
-    <ul>
-        {% for page in pages %}
-        <div>
-            <li><a href="{% url 'wiki:detail' page.id %}">{{ pages }}</a></li>
-        </div>
-        {% endfor %}
-    </ul>
 
     <footer>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

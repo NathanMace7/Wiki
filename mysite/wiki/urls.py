@@ -5,5 +5,6 @@ from . import views
 app_name = 'wiki'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('<int:pk>/', views.veiw_page, name='detail'),
+    path('<str:pk>/edit', views.edit_page, name='edit_page'),
+    path('<str:pk>/', views.veiw_page, name='detail'),
 ]

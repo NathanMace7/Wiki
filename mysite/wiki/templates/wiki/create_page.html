@@ -2,7 +2,7 @@
 
 {% block content %}
     {% block contentTitle %}<h1>{{page_name}}</h1>{% endblock %}
-    This page does not exist.
+    <p>This page does not exist.</p>
     <a class="btn btn-primary" 
         href="{% url 'wiki:edit_page' page_name %}">
         Create?
