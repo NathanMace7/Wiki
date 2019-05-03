@@ -15,4 +15,9 @@ class DetailView(generic.DetailView):
     model = Page
     template_name = 'wiki/detail.html'
 
-    
+def veiw_page(request, pk):
+    try:
+        page = Page.objects.get(pk=pk)
+        return render(request, 'wiki/detail.html', {'page': page})
+    except Page.DoesNotExist:
+        return render(request, 'wiki/create_page.html', {'page_name': pk})
