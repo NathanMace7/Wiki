@@ -45,6 +45,6 @@ def save_page(request, pk):
         page = Page.objects.get(pk=pk)
         page.content = content
     except Page.DoesNotExist:
-        page = Page(name=pk, content=content)
+        page = Page(title=pk, content=content)
     page.save()
-    return redirect('wiki:view_page', pk=pk)
+    return redirect('wiki:detail', pk=pk)
