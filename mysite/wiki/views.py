@@ -36,3 +36,6 @@ def edit_page(request, pk):
             'page_name': pk,
             'content': content,
         })
+
+def save_page(request, pk):
+    pass
