@@ -34,5 +34,5 @@ def edit_page(request, pk):
     return render(request, 'wiki/edit_page.html',
         {
             'page_name': pk,
-            'content': content
+            'content': content,
         })
