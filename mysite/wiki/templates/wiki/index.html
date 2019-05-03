@@ -1,4 +1,4 @@
-{% extends 'wiki/base.html' %}
+
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -15,14 +15,7 @@
 
 <body class="container">
     <p>This is here to display some text</p><br>
-    {% block content%}NO CONTENT PROVIDED{% endblock content%}
-    <ul>
-        {% for page in pages %}
-        <div>
-            <li><a href="{% url 'wiki:detail' page.id %}">{{ pages }}</a></li>
-        </div>
-        {% endfor %}
-    </ul>
+    
     <p>Can't find what you are looking for?</p>
     <button>Add Page</button>
 

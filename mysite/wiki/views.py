@@ -1,4 +1,5 @@
 from django.views import generic
+from django.shortcuts import render, redirect
 
 from .models import Page
 
@@ -38,4 +39,12 @@ def edit_page(request, pk):
         })
 
 def save_page(request, pk):
-    pass
+    content = request.POST["content"]
+
+    try:
+        page = Page.objects.get(pk=pk)
+        page.content = content
+    except Page.DoesNotExist:
+        page = Page(name=pk, content=content)
+    page.save()
+    return redirect('wiki:view_page', pk=pk)
